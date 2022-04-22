@@ -2,9 +2,17 @@ import tkinter as tk
 import os
 window = tk.Tk()
 
+if os.path.exists('C:/Users/Jurrian/Documents/testfolder/readme.txt'):
+    with open('actions.log', 'w') as file:
+        file.write("kippen")
+else:
+    with open('actions.log', 'w') as file:
+        file.write('kippen')
 
-file = open('actions.log', 'a')
 
+newFile = open('actions.log', 'r')
+content = newFile.read()
+print(content)
 
 
 
